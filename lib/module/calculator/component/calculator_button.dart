@@ -1,33 +1,36 @@
 import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
-  static const Grey = Color.fromARGB(255, 180, 180, 180);
-  static const Default = Color.fromARGB(255, 40, 40, 40);
-  static const Operation = Color.fromRGBO(250, 158, 13, 1);
+  static const grey = Color.fromARGB(255, 180, 180, 180);
+  static const defaultColor = Color.fromARGB(255, 40, 40, 40);
+  static const operationColor = Color.fromRGBO(250, 158, 13, 1);
 
   final String text;
   final bool big;
   final Color color;
   final void Function(String) cb;
 
-  Button({
+  const Button({
+    super.key,
     required this.text,
     this.big = false,
-    this.color = Default,
+    this.color = defaultColor,
     required this.cb,
   });
 
-  Button.big({
+  const Button.big({
+    super.key,
     required this.text,
     this.big = true,
-    this.color = Default,
+    this.color = defaultColor,
     required this.cb,
   });
 
-  Button.operation({
+  const Button.operation({
+    super.key,
     required this.text,
     this.big = false,
-    this.color = Operation,
+    this.color = operationColor,
     required this.cb,
   });
 
@@ -36,10 +39,10 @@ class Button extends StatelessWidget {
     return Expanded(
       flex: big ? 2 : 1,
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(backgroundColor: this.color),
+        style: ElevatedButton.styleFrom(backgroundColor: color),
         child: Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 32,
             fontWeight: FontWeight.w200,
@@ -54,7 +57,7 @@ class Button extends StatelessWidget {
 class ButtonRow extends StatelessWidget {
   final List<Button> buttons;
 
-  ButtonRow(this.buttons);
+  const ButtonRow(this.buttons, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +66,9 @@ class ButtonRow extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: buttons.fold(<Widget>[], (list, b) {
-          list.isEmpty ? list.add(b) : list.addAll([SizedBox(width: 1), b]);
+          list.isEmpty
+              ? list.add(b)
+              : list.addAll([const SizedBox(width: 1), b]);
           return list;
         }),
       ),
