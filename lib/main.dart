@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       home: BlocProvider(
         create: (_) => CalculatorBloc(),
-        child: CalculatorScreen(),
+        child: const CalculatorScreen(),
       ),
     );
   }
