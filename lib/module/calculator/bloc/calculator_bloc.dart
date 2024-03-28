@@ -10,4 +10,9 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
       // TODO: implement event handler
     });
   }
+  void onCalculatorEvent(CalculatorEvent event, Emitter<CalculatorState> emit) {
+    state(String command) {}
+    (event.command);
+    return emit(state as CalculatorState);
+  }
 }
