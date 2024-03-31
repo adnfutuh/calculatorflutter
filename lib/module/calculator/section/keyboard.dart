@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:glassmorphism_ui/glassmorphism_ui.dart';
 
+import '../component/button.dart';
 import '../component/calculator_button.dart';
 
 class Keyboard extends StatelessWidget {
@@ -9,13 +11,15 @@ class Keyboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 500,
+    return GlassContainer(
+      // color: Color.fromRGBO(48, 48, 48, 1),
+      height: 550,
       child: Column(
         children: <Widget>[
+          const SizedBox(height: 20),
           ButtonRow([
-            Button.big(text: 'AC', color: Button.grey, cb: cb),
-            Button(text: '%', color: Button.grey, cb: cb),
+            Button.big(text: 'AC', color: Button.dark, cb: cb),
+            Button(text: '%', color: Button.dark, cb: cb),
             Button.operation(text: '/', cb: cb),
           ]),
           const SizedBox(height: 1),
