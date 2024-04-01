@@ -40,21 +40,18 @@ class Button extends StatelessWidget {
     return Expanded(
       flex: big ? 2 : 1,
       child: GlassContainer(
-        opacity: 0.3,
-        height: 200,
-        width: 200,
         blur: 1,
         color: Colors.transparent,
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Colors.white.withOpacity(0.2),
+            Colors.white.withOpacity(0.1),
             Colors.blue.withOpacity(0.3),
           ],
         ),
         border: const Border.fromBorderSide(BorderSide.none),
-        shadowStrength: 5,
+        shadowStrength: 3,
         shape: BoxShape.circle,
         borderRadius: BorderRadius.circular(16),
         shadowColor: Colors.white.withOpacity(0.24),
