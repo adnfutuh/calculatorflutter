@@ -1,16 +1,5 @@
 # calculator
 
-A new Flutter project.
+Simple and Beautifull Calculator, made with Flutter with State Management BLOC for Android, IOS, and Web
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p align="center"><img src="https://user-images.githubusercontent.com/54095238/194518330-426add2c-815b-4972-aabc-39a068b01990.png" width="333"></p>
