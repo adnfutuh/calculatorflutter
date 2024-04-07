@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:glassmorphism_ui/glassmorphism_ui.dart';
-import 'package:calculator/module/calculator/state/cubit/theme_cubit.dart';
-import 'package:calculator/module/calculator/component/header.dart';
-import 'package:calculator/theme.dart';
 
 class Display extends StatelessWidget {
   final String text;
@@ -26,7 +21,7 @@ class Display extends StatelessWidget {
                 maxFontSize: 80,
                 maxLines: 1,
                 textAlign: TextAlign.end,
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.w100,
                   decoration: TextDecoration.none,
                   fontSize: 80,
