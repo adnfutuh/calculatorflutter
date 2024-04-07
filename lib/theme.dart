@@ -2,33 +2,7 @@ import 'package:flutter/material.dart';
 
 // Color Pallete
 Color kBlackColor = const Color(0xff020E27).withOpacity(0.7);
-Color kWhiteColor = const Color(0xFFFFFFFF).withOpacity(0.7);
-
-enum AppTheme {
-  greenLight,
-  greenDark,
-  blueLight,
-  blueDark,
-}
-
-final appThemeData = {
-  AppTheme.greenLight: ThemeData(
-    brightness: Brightness.light,
-    primaryColor: Colors.green,
-  ),
-  AppTheme.greenDark: ThemeData(
-    brightness: Brightness.dark,
-    primaryColor: Colors.green[700],
-  ),
-  AppTheme.blueLight: ThemeData(
-    brightness: Brightness.light,
-    primaryColor: Colors.blue,
-  ),
-  AppTheme.blueDark: ThemeData(
-    brightness: Brightness.dark,
-    primaryColor: Colors.blue[700],
-  ),
-};
+Color kWhiteColor = const Color(0xFFFFFFFF).withOpacity(0.1);
 
 ThemeData lightThemeData(BuildContext context) {
   return ThemeData.light().copyWith(

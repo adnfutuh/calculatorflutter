@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:glassmorphism_ui/glassmorphism_ui.dart';
 import 'package:calculator/theme.dart';
+import 'package:calculator/module/calculator/state/cubit/theme_cubit.dart';
 import '../state/calculator_bloc/calculator_bloc.dart';
-
 import '../section/display.dart';
 import '../section/keyboard.dart';
 
@@ -18,7 +17,7 @@ class CalculatorScreen extends StatefulWidget {
 class _CalculatorScreenState extends State<CalculatorScreen> {
   _onPressed(String command) {
     setState(() {
-      // context.read<CalculatorBloc>().add(CalculatorEvent(command: command));
+      context.read<CalculatorBloc>().add(CalculatorEvent(command: command));
     });
   }
 
