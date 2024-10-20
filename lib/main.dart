@@ -7,7 +7,7 @@ import 'module/calculator/state/calculator_bloc/calculator_bloc.dart';
 import 'module/calculator/state/cubit/theme_cubit.dart';
 
 void main() {
-  runApp(
+  runApp( 
     MultiBlocProvider(
       providers: [BlocProvider(create: (context) => ThemeCubit())],
       child: const MyApp(),
@@ -21,14 +21,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    runApp(
-      MultiBlocProvider(
-        providers: [BlocProvider(create: (context) => ThemeCubit())],
-        child: const MyApp(),
-      ),
-    );
-
-    var theme;
+    ThemeCubit theme = BlocProvider.of<ThemeCubit>(context, listen: true);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: theme.isDark ? darkThemeData(context) : lightThemeData(context),
